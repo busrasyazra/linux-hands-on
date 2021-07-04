@@ -1,0 +1,7 @@
+1)git version (for checking which version)
+2)sudo yum --showduplicates list git  (to see previous available git version)
+3)sudo yum install git-2.14.5-1.amzn2 -y  (for installing previous git version)
+4)git version
+5)sudo yum update git -y   (for updating git the latest version)
+6)git version
+7)sudo yum autoremove git -y  (to  uninstall git with all unused dependencies)
