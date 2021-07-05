@@ -1,0 +1,20 @@
+1)   sudo yum install -y httpd
+2)   sudo systemctl start httpd
+3)   sudo systemctl enable httpd
+4)   sudo yum install git -y
+5)   cd /var/www/html
+6)   sudo chmod -R 777 /var/www/html/
+7)   git clone https://github.com/muhammetguzel/aws_proje
+8)   cd aws_proje/
+9)   cp * /var/www/html/
+10)  rm -rf aws_proje/
+11)  chmod -R 777 *
+12)  cd ..
+13)  ls
+14)  sudo systemctl status httpd
+
+when you need to stop apache server;
+
+15)  sudo systemctl disable httpd
+16)  sudo systemctl stop httpd
+
