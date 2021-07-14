@@ -5,3 +5,7 @@ pip3 install flask-mysql
 pip3 install sqlalchemy
 
 pip3 install Flask-SQLAlchemy
+
+(for executing the code :
+
+ sudo python3 sqlite.py)
