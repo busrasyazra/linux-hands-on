@@ -1,0 +1,21 @@
+aws --version
+snap info aws-cli
+sudo apt-get update
+sudo apt-get upgrade
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+sudo apt install unzip
+unzip awscliv2.zip
+aws --version
+sudo ./aws/install
+aws --version
+aws configure
+ls -a
+cd .aws
+ls
+cat config
+cat credentials 
+cd ..
+aws configure --profile new-user
+aws s3 ls
+aws s3 ls s3://cf-templates-gr2phixa6eyi-us-east-1
+aws s3 ls s3://cf-templates-gr2phixa6eyi-us-east-1 --recursive
