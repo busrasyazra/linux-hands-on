@@ -1,0 +1,18 @@
+1) aws --version
+2) curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+3) unzip awscliv2.zip
+4) sudo ./aws/install
+5) aws --version
+6) aws configure
+7) aws sts get-caller-identity --query Account --output text
+8) mkdir dynamodb
+9) cd dynamodb/
+10) wget https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/samples/sampledata.zip
+11) ls
+12) unzip sampledata.zip
+13) ls
+14) aws dynamodb batch-write-item --request-items file://ProductCatalog.json
+15) aws dynamodb batch-write-item --request-items file://Forum.json
+16) aws dynamodb batch-write-item --request-items file://Thread.json
+17) aws dynamodb batch-write-item --request-items file://Reply.json
+   
