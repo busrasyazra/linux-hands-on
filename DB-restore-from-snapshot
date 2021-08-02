@@ -1,0 +1,13 @@
+For ubuntu machine (restore from snapshot)
+1) sudo apt update -y
+2) sudo apt upgrade -y
+3) sudo apt-get install mariadb-client -y
+4) mysql -h [rds-mysql.cvklqjpaw1r6.us-east-1.rds.amazonaws.com] -u admin -p
+5) mysql -h [restored-from-man-snapshot.cvklqjpaw1r6.us-east-1.rds.amazonaws.com] -u admin -p
+6) mysql -h [rds-mysql.cvklqjpaw1r6.us-east-1.rds.amazonaws.com] -u admin -p
+7) mysql -h [restore-in-time.cvklqjpaw1r6.us-east-1.rds.amazonaws.com] -u admin -p
+8) mysqldump -h [restore-in-time.cvklqjpaw1r6.us-east-1.rds.amazonaws.com] -u admin -p clarusway > backup.sql
+9) ls
+10)mysql -h [rds-mysql.cvklqjpaw1r6.us-east-1.rds.amazonaws.com] -u admin -p clarusway < backup.sql
+11)mysql -h [rds-mysql.cvklqjpaw1r6.us-east-1.rds.amazonaws.com] -u admin -p
+
