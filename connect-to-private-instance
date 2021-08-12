@@ -1,0 +1,31 @@
+# 1.  To conncet to private instance first we ensure the .pem file be exist in public instance.
+
+- connect to public instance
+- create a .pem file with the same name of your .pem file 
+   -sudo vi key.pem
+- open the .pem file in local with text editor
+- copy the text file
+- paste it in to the vi file
+- Esc :wq ---> Enter
+- chmod 400 .pem 
+-ssh ec2-user@"privateIP of private instance that you want to conncet"
+
+"OR"
+
+- go to folder that your pem file is located and send your pem file with the scp command to public_instance 
+
+scp -i key.pem /c/Users/home/.ssh/blueman.pem(the path of file you want to send) ec2-user@3.232.129.39:/home/ec2-user/
+
+"OR" 
+
+#  Type following code to start
+eval "$(ssh-agent)"
+
+#  Add your private key to the ssh agent
+ssh-add p.pem
+
+#  Connect to the instance in public subnet
+ssh -A ec2-user@ec2-3-88-199-43.compute-1.amazonaws.com
+
+#   connect to the Database instance in the privateA subnet 
+ssh ec2-user@10.7.2.20 (Private IP of Database Instance)

@@ -3,7 +3,8 @@ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip
 unzip awscliv2.zip
 sudo ./aws/install   ===>installing cli
 aws configure  ===> configuration for matching the account
-aws --versionaws sts get-caller-identity --query Account --output text ==> checking for account number after configuration
+aws --version
+aws sts get-caller-identity --query Account --output text ==> checking for account number after configuration
 aws ec2 create-security-group \
     --group-name sec_grp \
     --description "This Sec Group is to allow ssh and http from anywhere" ===>creating a security group
