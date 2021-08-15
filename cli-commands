@@ -33,3 +33,16 @@ aws ec2 run-instances \
 aws ec2 describe-instances --filters "Name=tag:Name,Values=roman_numbers" --query 'Reservations[].Instances[].InstanceId[]'  ===>for seeing the ec2 id
 aws ec2 terminate-instances --instance-ids  ===> terminating the instance
 aws ec2 delete-security-group --group-name sec_grp  ===> deleting security group
+
+
+
+
+
+
+
+
+
+aws ec2 describe-instances --query 'Reservations[*].Instances[*].InstanceId' --filters "Name=private-ip-address,Values=10.30.2.213" ====> how to find instanceid in cli
+
+aws iam list-roles --query "Roles[?RoleName == 'AmazonEKSClusterAutoscalerRole'].[RoleName, Arn]"  ====> how to find role arn
+
