@@ -8,7 +8,7 @@
 - paste it in to the vi file
 - Esc :wq ---> Enter
 - chmod 400 .pem 
--ssh ec2-user@"privateIP of private instance that you want to conncet"
+-ssh ec2-user@"privateIP of private instance that you want to connecet"
 
 "OR"
 
