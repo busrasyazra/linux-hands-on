@@ -1,0 +1,9 @@
+echo 'ClientAliveInterval 60' | sudo tee --append /etc/ssh/sshd_config
+
+sudo service sshd restart
+
+export PS1="\[\e[36m\]\u\[\e[m\]@\h-\w:\[\e[31m\]\\$\[\e[m\]"
+
+or
+
+export PS1="\[\e[;35m\][\u@\h \W]\$ \[\e[m\]"
