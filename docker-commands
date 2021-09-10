@@ -1,0 +1,69 @@
+ docker run -it alpine ash
+ docker ps -a
+ docker start sharp_wilson
+ docker attach sharp_wilson
+ docker rm sharp_wilson
+ docker ps -a
+ docker volume create cw-vol
+ docker volume ls
+ docker volume inspect cw-vol 
+ sudo ls -al /var/lib/docker/volumes/cw-vol/_data
+ docker container run -it --name clarus -v cw-vol:/cw alpine ash
+ sudo cat /var/lib/docker/volumes/cw-vol/_data/i-will-persist.txt
+ docker volume ls
+ docker ps -a
+ docker rm clarus
+ docker ps -a
+ sudo cat /var/lib/docker/volumes/cw-vol/_data/i-will-persist.txt
+ docker image ls
+ docker volume ls
+ ls -a
+ cd /
+ ls
+ cd /var/lib/docker/volumes/cw-vol/_data/i-will-persist.txt
+ docker run -it --name clarus2nd -v cw-vol:/cw2nd alpine ash
+   57  docker ps -a
+   58  docker run -it --name clarus3rd -v cw-vol:/cw3rd ubuntu bash
+   59  docker ps -a
+   60  docker run -it --name clarus4th -v cw-vol:/cw4th:ro ubuntu bash 
+   61  docker ps -a
+   62  docker start 7ad
+   63  docker exec -it 7ad ash
+   64  docker ps -a
+   65  docker container prune
+   66  docker ps -a
+   67  docker stop 7ada
+   68  docker rm 7ada
+   69  docker ps -a
+   70  docker volume rm cw-vol
+   71  docker volume ls
+   72  docker container ls
+
+  docker volume create full-vol
+  ls
+  docker volume ls
+  docker run -it --name vol-lesson -v full-vol:/cw alphine ash
+  docker run -it --name vol-lesson -v full-vol:/cw alpine ash
+  sudo ls /var/lib/docker/volumes/full-vol/_data
+  docker run -it --name clarus clarusway/hello-clarus sh
+  docker run -it --name clarus1 clarusway/hello-clarus sh
+  docker run -it --name try1 -v full-vol:/cw  clarusway/hello-clarus sh
+  docker volume inspect empty-vol
+  sudo ls
+  sudo ls sudo ls /var/lib/docker/volumes/full-vol/_data
+  sudo ls sudo ls /var/lib/docker/volumes/empty-vol/_data
+  sudo ls /var/lib/docker/volumes/empty-vol/_data
+  docker run -it --name try2 -v empty-vol:/hello-clarus clarusway/hello-clarus sh
+  sudo ls /var/lib/docker/volumes/empty-vol/_data
+  docker run -it --name try3 -v full-vol:/hello-clarus clarusway/hello-clarus sh
+  docker ps -a
+  docker container prune
+  docker volume prune
+  docker volume ls
+  docker container ls
+  docker run -d --name nginx-default -p 80:80 nginx
+  docker exec -it nginx-default bash
+  mkdir webpage && cd webpage
+  echo "<h1>welcome to clarusway</h1>" > index.html
+  ls
+  docker run -d --name nginx-new -p 8080:80 -v /home/ec2-user/webpage:/usr/share/nginx/html nginx
